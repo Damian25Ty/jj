@@ -137,6 +137,10 @@ button:hover{
   if (SName != LName & SPass != LPass & CPass ==""){
     window.location.href="404.html";
   }
+  if (LName =="" & LPass == "" & CPass== ""){
+    window.location.href="404.html";
+  }
+ 
       /*const dataElement = document.getElementById("Anounce");
         const urlParams = new URLSearchParams(window.location.search);
         const storeData1 = urlParams.get("data1");
