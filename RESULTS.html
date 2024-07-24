@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Center</title>
+</head>
+<body>
+    <form>
+        <button formaction="add_student.html" style="border: 0;">Add Students</button>
+        <button formaction="student.html" style="border: 0;">RESULT MAKING</button><br><br>
+    </form>
+    <script>
+          const SName = localStorage.getItem('Tnames')
+  const SPass = localStorage.getItem('Tpasswords')
+  const LName = localStorage.getItem('TNames')
+  const LPass = localStorage.getItem('TPass')
+  const CPass = localStorage.getItem('CPass')
+  if (SName != LName & SPass != LPass & CPass ==""){
+    window.location.href="404.html";
+  }
+
+    </script>
+</body>
+</html>
