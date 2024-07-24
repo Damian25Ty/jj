@@ -31,8 +31,16 @@ button:hover{
             background-color: rgb(119, 197, 132);
         }
         #form{
- display: none;   
-}
+ display: block;   
+ font-size: 30px;
+        }
+        #display{
+            width:250;
+            height:250;
+        }
+        #pre{
+            font-size:30px;
+        }
 @media only screen and (max-width: 400px){
     body{
         width: 90%;
@@ -40,15 +48,20 @@ button:hover{
     }
     #home{
         width: 107%;
-}
-    #form{
- display: grid;  
+    }
+#form{
+ display: block;   
+ font-size: 10px;
  width: 107%;
- height: 100%; 
-}
-#form1{
- display: none;   
-}
+ height: 100%;
+        }
+        #display{
+            width:65;
+            height:65;
+        }
+        #pre{
+            font-size:10px;
+        }
 }
 @media only screen and (max-width: 800px){
     body{
@@ -59,13 +72,18 @@ button:hover{
         width: 107%;
 }
     #form{
- display: grid;   
+ display: block;   
+ font-size: 10px;
  width: 107%;
  height: 100%;
-}
-#form1{
- display: none;   
-}
+        }
+        #display{
+            width:65;
+            height:65;
+        }
+        #pre{
+            font-size:10px;
+        }
 }
     </style>
 </head>
@@ -78,7 +96,7 @@ button:hover{
             <button formaction="PHead.html" style="border: 0;">Parents Anouncement</button>
           </div>
         </form>
-        <form id="form1" action="AAddress.html">
+        <form id="form" action="AAddress.html">
             <div style="padding: 1px;background-color: blue;"><label><b>My Profile</b></label></div>
         <div style="background-color: blue;"><img src="" id="display"><input id="file" type="file" onchange="uploadimage()"><Pre id="pre" style="text-align: left;padding: 0;">               <label for="Name">Full Name:</label>                       <label id="Name"></label></Pre><br>
             <Pre id="pre" style="text-align: left;padding: 3rem;">             <label for="">Mobile Number:</label>                  <label id="Phone" style="color: black;"></label></Pre><br>
