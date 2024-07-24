@@ -94,7 +94,7 @@ button:hover{
             <div style="padding: 1px;font-size: 15px;background-color: blue;"><label><b>My Profile</b></label></div>
         <div style="background-color: blue;"><img src="" id="display" width="65" height="65"><input type="file" onchange="uploadimage()"><Pre style="font-size: 12px;text-align: left;padding: 0;">          <label for="Name">Full Name:</label> <label id="Names"></label></Pre><br>
             <Pre style="text-align: left;padding: 3rem;">   <label for="">Mobile Number:</label> <label id="Phones" style="color: black;"></label></Pre><br>
-            <Pre style="text-align: left;padding: 0">          <label for="">Address:</label> <label id="Address" style="color: black;font-size: 12px"><b>Click Update to add your address</b></label><button>Update</button></Pre>
+            <Pre style="text-align: left;padding: 0">          <label for="">Address:</label> <label id="Address1" style="color: black;font-size: 12px"><b>Click Update to add your address</b></label><button>Update</button></Pre>
             <Pre style="text-align: left;padding: 0"> </Pre>
             <Pre style="text-align: left;padding: 0"> </Pre>
             <Pre style="text-align: left;padding: 0"> </Pre>
@@ -112,6 +112,7 @@ button:hover{
        const NAMEs = document.getElementById('Names')
        const PHONEs = document.getElementById('Phones')
        const Address = document.getElementById('Address')
+       const Address1 = document.getElementById('Address1')
        const Upbutton = document.getElementById('Update')
        const AddressInput = document.getElementById('Input')
 
@@ -142,6 +143,10 @@ button:hover{
 
         if(Address){
             Address.textContent = Addres;
+            
+        }
+        if(Address1){
+            Address1.textContent = Addres;
             
         }
         const SName = localStorage.getItem('Tnames')
