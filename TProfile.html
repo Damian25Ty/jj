@@ -30,9 +30,15 @@ button:hover{
         button:active{
             background-color: rgb(119, 197, 132);
         }
-        
 #form{
- display: none;   
+ font-size: 30px;
+}
+#display{
+    width: 250px;
+    height: 250px;
+}
+#pre{
+    font-size: 30px;
 }
 @media only screen and (max-width: 400px){
     body{
@@ -42,14 +48,16 @@ button:hover{
     #home{
         width: 107%;
 }
-    #form{
- display: grid;  
+#form{
+ font-size: 10px;
  width: 107%;
- height: 100%; 
- font-size: 12px;
 }
-#form1{
- display: none;   
+#display{
+    width: 65px;
+    height: 65px;
+}
+#pre{
+    font-size: 10px;
 }
 }
 @media only screen and (max-width: 800px){
@@ -60,14 +68,16 @@ button:hover{
     #home{
         width: 107%;
 }
-    #form{
- display: grid;   
+#form{
+ font-size: 10px;
  width: 107%;
- height: 100%;
- font-size: 12px;
 }
-#form1{
- display: none;   
+#display{
+    width: 65px;
+    height: 65px;
+}
+#pre{
+    font-size: 10px;
 }
 }
     </style>
@@ -75,30 +85,21 @@ button:hover{
 <body>
     <form>
         <div id="home">
-            <button formaction="Thome.html" style="border: 0;">HOME</button><br><br>
-            <button formaction="TProfile.html" style="border: 0;">PROFILE</button><br><br>
-            <button formaction="RESULTS.html" style="border: 0;">Result Making</button><br><br>
-            <button formaction="TAnouncement.html" style="border: 0;">School Anouncement</button>
-          </div>
+          <button formaction="Thome.html" style="border: 0;">HOME</button><br>
+          <button formaction="TProfile.html" style="border: 0;">PROFILE</button><br>
+          <button formaction="RESULTS.html" style="border: 0;">RESULT MAKING</button><br>
+          <button formaction="TAnouncement.html" style="border: 0;">SCHOOL ANNOUNCEMENT</button>
+        </div> 
         </form>
-        <form id="form1" action="TAddress.html">
-            <div style="padding: 1px;font-size: 30px;background-color: blue;"><label><b>My Profile</b></label></div>
-        <div style="background-color: blue;"><img src="" id="display" width="250" height="250"><input type="file" onchange="uploadimage()"><Pre style="font-size: 30px;text-align: left;padding: 0;">               <label for="Name">Full Name:</label>                       <label id="Name"></label></Pre><br>
-            <Pre style="font-size: 30px;text-align: left;padding: 3rem;">             <label for="">Mobile Number:</label>                  <label id="Phone" style="color: black;"></label></Pre><br>
-            <Pre style="font-size: 30px;text-align: left;padding: 0">                <label for="">Address:</label>                        <label id="Address" style="color: black;">Click Update to add your address:</label><button>Update</button></Pre>
-            <Pre style="font-size: 30px;text-align: left;padding: 0"> </Pre>
-            <Pre style="font-size: 30px;text-align: left;padding: 0"> </Pre>
-            <Pre style="font-size: 30px;text-align: left;padding: 0"> </Pre>
-        </div></form>
-        <form id="form" action="TAddress.html">
-            <div style="padding: 1px;font-size: 15px;background-color: blue;"><label><b>My Profile</b></label></div>
-        <div style="background-color: blue;"><img src="" id="display" width="65" height="65"><input type="file" onchange="uploadimage()"><Pre style="font-size: 12px;text-align: left;padding: 0;">          <label for="Name">Full Name:</label> <label id="Names"></label></Pre><br>
-            <Pre style="text-align: left;padding: 3rem;">   <label for="">Mobile Number:</label> <label id="Phones" style="color: black;"></label></Pre><br>
-            <Pre style="text-align: left;padding: 0">          <label for="">Address:</label> <label id="Address1" style="color: black;font-size: 12px"><b>Click Update to add your address</b></label><button>Update</button></Pre>
-            <Pre style="text-align: left;padding: 0"> </Pre>
-            <Pre style="text-align: left;padding: 0"> </Pre>
-            <Pre style="text-align: left;padding: 0"> </Pre>
-        </div></form>
+    <form id="form" action="TAddress.html">
+        <div style="padding: 1px;background-color: blue;"><label><b>My Profile</b></label></div>
+    <div style="background-color: blue;"><img src="" id="display"><input type="file" onchange="uploadimage()"><Pre id="pre" style="text-align: left;padding: 0;">               <label for="Name">Full Name:</label>                       <label id="Name"></label></Pre><br>
+        <Pre id="pre" style="text-align: left;padding: 3rem;">        <label for="">Mobile Number:</label>                  <label id="Phone" style="color: black;"></label></Pre><br>
+        <Pre id="pre" style="text-align: left;padding: 0">                <label for="">Address:</label>                        <label id="Address" style="color: black;">Click Update to add your address:</label><button>Update</button></Pre>
+        <Pre id="pre" style="text-align: left;padding: 0"> </Pre>
+        <Pre id="pre" style="text-align: left;padding: 0"> </Pre>
+        <Pre id="pre" style="text-align: left;padding: 0"> </Pre>
+    </div></form>
     <script>
         // Details from Sign UP Page
        const Name = localStorage.getItem('Tnames');
@@ -123,9 +124,9 @@ button:hover{
             localStorage.setItem('Display', displayValue);
         }
         const Display = localStorage.getItem('Display');
-        document.getElementById('display').src = Display;  
+        document.getElementById('display').src = Display;       
 
-       if(NAME){
+        if(NAME){
         NAME.textContent = Name;
        }
 
@@ -157,10 +158,7 @@ button:hover{
   if (SName != LName & SPass != LPass & CPass ==""){
     window.location.href="404.html";
   }
-  if (LName =="" & LPass == "" & CPass== ""){
-    window.location.href="404.html";
-  }
-
+    
     </script>
 </body>
 </html>
